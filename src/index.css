@@ -27,6 +27,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -43,16 +44,55 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #646cff;
   cursor: pointer;
   transition: border-color 0.25s;
+  height: 50px;
 }
 button:hover {
+  background-color: #747bff;
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 300px;
+}
+
+fieldset {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: none;
+  gap: 0.25rem;
+}
+
+fieldset:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input {
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1rem;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {
